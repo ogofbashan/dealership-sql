@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+<h1>hello</h1>
+
+{% for x in car %}
+  {% if x.cust_id is none %}
+  <li>{{x.year, x.color, x.make, x.model}}</li>
+  {% endif %}
+{% endfor %}
+{% endblock %}

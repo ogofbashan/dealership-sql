@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+{% for customer in customer %}
+  {% if customer.cust_id == search_cust_id %}
+  <h3>{{customer.full_name}}</h3>
+  {% endif %}
+{% endfor %}
+{% for car in car %}
+  {% if car.cust_id == search_cust_id %}
+  <h3>{{car.car_id, car.make, car.model, car.color, car.year, car.vin}}</h3>
+  {% endif %}
+{% endfor %}
+{% endblock %}
